@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="produtos">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Novo Produto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+      <main class="content"></main>
+
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="modal__header">
+            <div>
+              <div class="modal__title">Novo Produto</div>
+              <div class="modal__subtitle">Preencha os dados abaixo para cadastrar um novo produto.</div>
+            </div>
+            <a href="../14-produtos/index.html" class="modal__close">
+              <i data-icon="x" data-size="18"></i>
+            </a>
+          </div>
+
+          <div class="modal__body">
+            <div class="form-section">
+              <div class="form-section__title"><i class="ico" data-icon="tag" data-size="14"></i> Identificação</div>
+              <div class="form-grid">
+                <div class="form-field"><label>Código Interno *</label><input type="text" placeholder="Ex: OLE-5W30" maxlength="30" required /></div>
+                <div class="form-field"><label>Código de Barras</label><input type="text" placeholder="0123456789012" maxlength="60" /></div>
+                <div class="form-field" style="grid-column: span 2;"><label>Nome do Produto *</label><input type="text" placeholder="Nome completo do produto" maxlength="150" required /></div>
+                <div class="form-field">
+                  <label>Tipo *</label>
+                  <select required>
+                    <option value="OUTROS" selected>OUTROS</option>
+                    <option value="OLEO">ÓLEO</option>
+                    <option value="ADITIVO">ADITIVO</option>
+                    <option value="LUBRIFICANTE">LUBRIFICANTE</option>
+                    <option value="FLUIDO">FLUIDO</option>
+                    <option value="LIMPEZA">LIMPEZA</option>
+                    <option value="CONSUMIVEL">CONSUMÍVEL</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label>Categoria *</label>
+                  <select required>
+                    <option>Selecione a categoria</option>
+                    <option>enzo</option>
+                    <option>Enzo angeloni de oliveira barboz</option>
+                    <option>RICARDO RIBEIRO SECO</option>
+                  </select>
+                  <a href="../32-categorias-produtos/index.html" class="fs-12 text-secondary mt-12" style="display:inline-flex;align-items:center;gap:4px;">
+                    <i data-icon="plus" data-size="11"></i> Gerenciar categorias
+                  </a>
+                </div>
+                <div class="form-field"><label>Marca</label><input type="text" placeholder="Ex: Mobil, Castrol..." maxlength="80" /></div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__title"><i class="ico" data-icon="clipboard" data-size="14"></i> Detalhes Técnicos</div>
+              <div class="form-grid">
+                <div class="form-field" style="grid-column: span 2;"><label>Descrição</label><input type="text" placeholder="Descrição resumida do produto" maxlength="255" /></div>
+                <div class="form-field"><label>Aplicação</label><input type="text" placeholder="Onde o produto é usado" maxlength="255" /></div>
+                <div class="form-field"><label>Volume / Embalagem</label><input type="text" placeholder="Ex: 1L, 500ml, 1kg" maxlength="30" /></div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__title"><i class="ico" data-icon="package" data-size="14"></i> Gestão de Estoque</div>
+              <div class="form-grid">
+                <div class="form-field"><label>Estoque Atual</label><input type="number" step="0.001" placeholder="0" /></div>
+                <div class="form-field"><label>Estoque Mínimo</label><input type="number" step="0.001" placeholder="0" /></div>
+                <div class="form-field" style="grid-column: span 2;"><label>Localização *</label><input type="text" placeholder="Ex: Prateleira A1, Box 12" maxlength="100" required /></div>
+                <div class="form-field">
+                  <label>Controla Estoque</label>
+                  <div class="radio-row"><label><input type="radio" name="ctrl" checked /> Sim</label><label><input type="radio" name="ctrl" /> Não</label></div>
+                </div>
+                <div class="form-field">
+                  <label>Ativo</label>
+                  <div class="radio-row"><label><input type="radio" name="ativo" checked /> Sim</label><label><input type="radio" name="ativo" /> Não</label></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section__title"><i class="ico" data-icon="dollar" data-size="14"></i> Financeiro</div>
+              <div class="form-grid">
+                <div class="form-field"><label>Preço de Custo (R$)</label><input type="number" step="0.01" placeholder="0,00" /></div>
+                <div class="form-field"><label>Preço de Venda (R$)</label><input type="number" step="0.01" placeholder="0,00" /></div>
+                <div class="form-field"><label>Margem de Lucro (%)</label><input type="text" placeholder="Calculado automaticamente" disabled /></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal__footer">
+            <div class="modal__footer-left">Campos obrigatórios: codigo_interno, nome, tipo, categorias_produtos_id, localizacao</div>
+            <a href="../14-produtos/index.html" class="btn btn--ghost"><i data-icon="x" data-size="14"></i> Cancelar</a>
+            <button class="btn btn--primary"><i data-icon="save" data-size="14"></i> Gravar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

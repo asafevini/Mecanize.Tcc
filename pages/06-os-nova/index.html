@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="ordens">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Nova Ordem de Serviço</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+      <main class="content"></main>
+
+      <div class="modal-overlay">
+        <div class="modal modal--xl">
+          <div class="modal__header">
+            <div>
+              <div class="modal__title">Nova Ordem de Serviço</div>
+                <div class="modal__subtitle">Preencha os dados abaixo para criar uma nova OS</div>
+              </div>
+              <a href="../04-ordens-servico/index.html" class="modal__close">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </a>
+            </div>
+
+            <div class="modal__body">
+              <div class="grid-2">
+                <!-- Cliente -->
+                <div class="form-section">
+                  <div class="form-section__title"><i class="ico" data-icon="user" data-size="14"></i> Cliente</div>
+                  <div class="form-grid">
+                    <div class="form-field"><label>Nome do cliente</label><input type="text" placeholder="Buscar cliente..." value="João da Silva" /></div>
+                    <div class="form-field"><label>CPF/CNPJ</label><input type="text" placeholder="000.000.000-00" /></div>
+                    <div class="form-field" style="grid-column: 1/-1;"><label>Endereço</label><input type="text" placeholder="Rua, Av..." value="Rua das Flores, 250 - Jardim das Palmeiras" /></div>
+                    <div class="form-field"><label>Cidade</label><input type="text" value="São Paulo - SP" /></div>
+                    <div class="form-field"><label>CEP</label><input type="text" value="01453-000" /></div>
+                  </div>
+                </div>
+
+                <!-- Veículo -->
+                <div class="form-section">
+                  <div class="form-section__title"><i class="ico" data-icon="car" data-size="14"></i> Veículo</div>
+                  <div class="form-grid">
+                    <div class="form-field"><label>Placa</label><input type="text" value="AAA-1111" /></div>
+                    <div class="form-field"><label>Marca</label><input type="text" value="Fiat" /></div>
+                    <div class="form-field"><label>Modelo</label><input type="text" value="Argo 1.0" /></div>
+                    <div class="form-field"><label>Renavam</label><input type="text" value="98765432123456" /></div>
+                    <div class="form-field"><label>Quilometragem</label><input type="text" value="25.400" /></div>
+                    <div class="form-field"><label>Cor</label><input type="text" value="Branco" /></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Detalhes -->
+              <div class="grid-3">
+                <div class="form-section">
+                  <div class="form-section__title">Detalhes da OS</div>
+                  <div class="form-field"><label>Número da OS</label><input type="text" value="5833" disabled /></div>
+                  <div class="form-field"><label>Data de entrada</label><input type="date" value="2024-05-23" /></div>
+                  <div class="form-field"><label>Previsão de entrega</label><input type="date" value="2024-05-30" /></div>
+                  <div class="form-field"><label>Mecânico responsável</label><select><option>João da Silva</option><option>Maria Costa</option></select></div>
+                </div>
+                <div class="form-section">
+                  <div class="form-section__title">Problema Relatado</div>
+                  <div class="form-field"><textarea placeholder="Descreva o problema relatado pelo cliente..."></textarea></div>
+                </div>
+                <div class="form-section">
+                  <div class="form-section__title">Observações</div>
+                  <div class="form-field"><textarea placeholder="Observações internas..."></textarea></div>
+                </div>
+              </div>
+
+              <!-- Itens -->
+              <div class="form-section">
+                <div class="form-section__title">Itens da Ordem de Serviço</div>
+                <div class="table-wrap">
+                  <table class="table">
+                    <thead><tr><th>Descrição</th><th>Tipo</th><th>Qtd.</th><th>Valor Unit. (R$)</th><th>Total (R$)</th><th>Ações</th></tr></thead>
+                    <tbody>
+                      <tr><td>Óleo 5W30</td><td><span class="badge badge--info">Peça</span></td><td>4,00</td><td>30,00</td><td>120,00</td><td><button class="row-action-btn danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/></svg></button></td></tr>
+                      <tr><td>Filtro de Óleo</td><td><span class="badge badge--info">Peça</span></td><td>1,00</td><td>45,00</td><td>45,00</td><td><button class="row-action-btn danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/></svg></button></td></tr>
+                      <tr><td>Troca de óleo</td><td><span class="badge badge--purple">Serviço</span></td><td>1,00</td><td>50,00</td><td>50,00</td><td><button class="row-action-btn danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/></svg></button></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn--ghost mt-12">+ Adicionar item</button>
+              </div>
+
+              <!-- Totais -->
+              <div class="totals">
+                <div class="totals__item"><span>Total Peças</span><b>R$ 215,00</b></div>
+                <div class="totals__item"><span>Total Serviços</span><b>R$ 80,00</b></div>
+                <div class="totals__item"><span>Descontos</span><b>R$ 0,00</b></div>
+                <div class="totals__item totals__item--total"><span>Total Geral</span><b>R$ 295,00</b></div>
+              </div>
+            </div>
+
+            <div class="modal__footer">
+              <div class="modal__footer-left">Status: <span class="badge badge--neutral"><span class="badge__dot"></span>Rascunho</span></div>
+              <button class="btn btn--ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Imprimir</button>
+              <a href="../04-ordens-servico/index.html" class="btn btn--ghost"><i data-icon="x" data-size="14"></i> Cancelar</a>
+              <button class="btn btn--primary"><i data-icon="save" data-size="14"></i> Gravar</button>
+              <button class="btn btn--success"><i data-icon="arrow-right" data-size="14"></i> Gerar OS</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

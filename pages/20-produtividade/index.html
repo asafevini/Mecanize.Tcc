@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="relatorios">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Produtividade por Mecânico</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Produtividade por Mecânico</h1>
+            <p class="page-header__subtitle">Acompanhe o desempenho e a produtividade da sua equipe.</p>
+          </div>
+        </div>
+
+        <section class="stat-grid">
+          <div class="stat-card"><div class="stat-card__icon blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="stat-card__label">Média de OS por Mecânico</div><div class="stat-card__value">27,5</div><div class="stat-card__delta">Por mecânico no mês</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><div class="stat-card__label">Melhor Desempenho do Mês</div><div class="stat-card__value">Ricardo Souza</div><div class="stat-card__delta">42 OS concluídas</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="stat-card__label">Tempo Médio de Execução</div><div class="stat-card__value">2h 45min</div><div class="stat-card__delta"><i data-icon="trending-down" data-size="12"></i> 8% em relação ao mês anterior</div></div></div>
+        </section>
+
+        <section class="card">
+          <div class="card__header"><div class="card__title">OS Concluídas por Mecânico</div></div>
+          <div class="card__body">
+            <div class="chart-wrap"><canvas id="prodChart"></canvas></div>
+          </div>
+        </section>
+
+        <section class="card mt-24">
+          <div class="card__header"><div class="card__title">Detalhamento por Mecânico</div></div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Mecânico</th><th>OS Concluídas</th><th>Faturamento Gerado</th><th>Avaliação Média</th><th>Eficiência</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar avatar--sm">RS</div><div><div class="user-cell__name">Ricardo Souza</div></div></div></td>
+                  <td>42</td><td>R$ 24.450,00</td><td><span class="stars">★★★★★</span> 4,8</td>
+                  <td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:140px;"><span style="width:92%;background:var(--color-success);"></span></div>92%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCD34D,#D97706);">AL</div><div><div class="user-cell__name">André Lima</div></div></div></td>
+                  <td>31</td><td>R$ 19.870,00</td><td><span class="stars">★★★★</span> 4,5</td>
+                  <td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:140px;"><span style="width:87%;background:var(--color-success);"></span></div>87%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#86EFAC,#16A34A);">FC</div><div><div class="user-cell__name">Fernanda Costa</div></div></div></td>
+                  <td>24</td><td>R$ 15.320,00</td><td><span class="stars">★★★★</span> 4,3</td>
+                  <td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:140px;"><span style="width:78%;background:var(--color-success);"></span></div>78%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#A5B4FC,#4338CA);">MO</div><div><div class="user-cell__name">Marcos Oliveira</div></div></div></td>
+                  <td>18</td><td>R$ 10.620,00</td><td><span class="stars">★★★★</span> 4,2</td>
+                  <td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:140px;"><span style="width:65%;background:var(--color-warning);"></span></div>65%</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination"><span>Dados referentes ao período selecionado</span></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

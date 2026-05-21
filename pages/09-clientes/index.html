@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="clientes">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Clientes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Gestão de Clientes</h1>
+            <p class="page-header__subtitle">Gerencie e acompanhe os clientes da oficina.</p>
+          </div>
+          <div class="page-header__actions">
+            <a href="../10-cliente-novo/index.html" class="btn btn--primary">+ Novo Cliente</a>
+          </div>
+        </div>
+
+        <section class="stat-grid">
+          <div class="stat-card"><div class="stat-card__icon blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="stat-card__label">Total de Clientes</div><div class="stat-card__value">248</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i>12% em relação ao mês anterior</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-3-3.87"/><path d="M4 21v-2a4 4 0 0 1 4-4h2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6"/><path d="M19 8v6"/></svg></div><div><div class="stat-card__label">Novos esse Mês</div><div class="stat-card__value">18</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i>8% em relação ao mês anterior</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><div class="stat-card__label">Clientes VIP/Recorrentes</div><div class="stat-card__value">64</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i>5% em relação ao mês anterior</div></div></div>
+        </section>
+
+        <section class="card">
+          <div class="table-toolbar">
+            <div class="search-wrap"><input type="text" placeholder="Buscar por nome do cliente, CPF ou CNPJ..." /></div>
+            <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;"><option>Veículo: Todos</option></select>
+            <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;"><option>Última visita</option></select>
+            <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;"><option>Status: Todos</option></select>
+            <button class="btn btn--ghost">+ Mais filtros</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Cliente</th><th>Contato</th><th>Veículo Cadastrados</th><th>Última Visita</th><th>Status</th><th>Ações</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar">JS</div><div><div class="user-cell__name">João da Silva</div><div class="user-cell__sub">CPF: 123.456.789-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 91234-5678</div><div class="text-muted fs-12">joao.silva@email.com</div></td>
+                  <td>Honda Civic 2018 <span class="badge badge--neutral">+1</span></td>
+                  <td>23/05/2024</td>
+                  <td><span class="badge badge--success"><span class="badge__dot"></span>Ativo</span></td>
+                  <td><div class="row-actions"><a href="../12-cliente-visualizar/index.html" class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a><a href="../11-cliente-editar/index.html" class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar" style="background:linear-gradient(135deg,#FCA5A5,#DC2626);">MO</div><div><div class="user-cell__name">Maria Oliveira</div><div class="user-cell__sub">CPF: 987.654.321-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 99876-1122</div><div class="text-muted fs-12">maria.o@email.com</div></td>
+                  <td>Toyota Corolla 2020</td>
+                  <td>22/05/2024</td>
+                  <td><span class="badge badge--success"><span class="badge__dot"></span>Ativo</span></td>
+                  <td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/></svg></button><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar" style="background:linear-gradient(135deg,#86EFAC,#16A34A);">PS</div><div><div class="user-cell__name">Pedro Santos</div><div class="user-cell__sub">CPF: 456.789.123-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 91532-7878</div><div class="text-muted fs-12">pedro.s@email.com</div></td>
+                  <td>Ford Ranger 2019</td>
+                  <td>22/05/2024</td>
+                  <td><span class="badge badge--success"><span class="badge__dot"></span>Ativo</span></td>
+                  <td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/></svg></button><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar" style="background:linear-gradient(135deg,#FCD34D,#D97706);">AF</div><div><div class="user-cell__name">Ana Ferreira</div><div class="user-cell__sub">CPF: 321.654.987-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 93456-7890</div><div class="text-muted fs-12">ana.f@email.com</div></td>
+                  <td>Chevrolet Onix 2021</td>
+                  <td>21/05/2024</td>
+                  <td><span class="badge badge--success"><span class="badge__dot"></span>Ativo</span></td>
+                  <td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/></svg></button><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar" style="background:linear-gradient(135deg,#A5B4FC,#4338CA);">LA</div><div><div class="user-cell__name">Lucas Almeida</div><div class="user-cell__sub">CPF: 789.123.456-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 97890-1234</div><div class="text-muted fs-12">lucas.a@email.com</div></td>
+                  <td>Jeep Renegade 2018</td>
+                  <td>20/05/2024</td>
+                  <td><span class="badge badge--success"><span class="badge__dot"></span>Ativo</span></td>
+                  <td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/></svg></button><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar" style="background:linear-gradient(135deg,#F9A8D4,#BE185D);">RC</div><div><div class="user-cell__name">Rafael Costa</div><div class="user-cell__sub">CPF: 159.357.486-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 96321-0987</div><div class="text-muted fs-12">rafael.c@email.com</div></td>
+                  <td>Fiat Toro 2020</td>
+                  <td>18/05/2024</td>
+                  <td><span class="badge badge--danger"><span class="badge__dot"></span>Inativo</span></td>
+                  <td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/></svg></button><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar" style="background:linear-gradient(135deg,#5EEAD4,#0F766E);">JM</div><div><div class="user-cell__name">Juliana Martins</div><div class="user-cell__sub">CPF: 753.951.852-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 94567-3210</div><div class="text-muted fs-12">juliana.m@email.com</div></td>
+                  <td>Hyundai HB20 2019</td>
+                  <td>15/05/2024</td>
+                  <td><span class="badge badge--success"><span class="badge__dot"></span>Ativo</span></td>
+                  <td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/></svg></button><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+                <tr>
+                  <td><div class="user-cell"><div class="avatar" style="background:linear-gradient(135deg,#C4B5FD,#6D28D9);">BL</div><div><div class="user-cell__name">Bruno Lima</div><div class="user-cell__sub">CPF: 852.741.963-00</div></div></div></td>
+                  <td><div class="flex items-center gap-8"><i data-icon="phone" data-size="12"></i>(11) 98512-2456</div><div class="text-muted fs-12">bruno.l@email.com</div></td>
+                  <td>VW Polo 2021</td>
+                  <td>14/05/2024</td>
+                  <td><span class="badge badge--success"><span class="badge__dot"></span>Ativo</span></td>
+                  <td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/></svg></button><button class="row-action-btn danger"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/></svg></button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <span>Mostrando 1 a 8 de 248 resultados</span>
+            <div class="pagination__pages">
+              <button class="pagination__btn">‹</button>
+              <button class="pagination__btn is-active">1</button>
+              <button class="pagination__btn">2</button>
+              <button class="pagination__btn">3</button>
+              <button class="pagination__btn">›</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="mt-16">
+          <a href="../13-clientes-desativados/index.html" class="text-secondary fs-13 link-icon"><i data-icon="arrow-right" data-size="12"></i> Ver clientes desativados</a>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="inicio">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Notificações</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Notificações</h1>
+            <p class="page-header__subtitle">Acompanhe as atualizações recentes da sua Ordem de Serviço.</p>
+          </div>
+        </div>
+
+        <section class="card">
+          <div class="tabs">
+            <div class="tabs__item is-active">Todos</div>
+            <div class="tabs__item">Não lidas</div>
+            <div class="tabs__item">Alertas de Peça</div>
+            <div class="tabs__item">Status de OS</div>
+          </div>
+
+          <ul class="notif-list">
+            <li class="notif">
+              <div class="notif__icon info">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </div>
+              <div class="notif__body">
+                <div class="notif__title">OS #1287 · Status alterado</div>
+                <div class="notif__desc">O status da OS #1287 foi alterado para "Em Manutenção".</div>
+              </div>
+              <div class="notif__meta">Há 5 minutos</div>
+              <a href="../07-os-visualizar/index.html" class="btn btn--ghost btn--sm">Ver OS</a>
+            </li>
+
+            <li class="notif">
+              <div class="notif__icon warning">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="notif__body">
+                <div class="notif__title">OS #1283 · Peça em falta</div>
+                <div class="notif__desc">Há peças em falta para a OS #1283. Verifique os itens pendentes.</div>
+              </div>
+              <div class="notif__meta">Há 15 minutos</div>
+              <a href="#" class="btn btn--ghost btn--sm">Ver OS</a>
+            </li>
+
+            <li class="notif">
+              <div class="notif__icon success">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="notif__body">
+                <div class="notif__title">OS #1279 · Concluída</div>
+                <div class="notif__desc">A OS #1279 foi concluída com sucesso.</div>
+              </div>
+              <div class="notif__meta">Há 1 hora</div>
+              <a href="#" class="btn btn--ghost btn--sm">Ver OS</a>
+            </li>
+
+            <li class="notif">
+              <div class="notif__icon info">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </div>
+              <div class="notif__body">
+                <div class="notif__title">OS #1286 · Status alterado</div>
+                <div class="notif__desc">O status da OS #1286 foi alterado para "Aguardando Peças".</div>
+              </div>
+              <div class="notif__meta">Há 2 horas</div>
+              <a href="#" class="btn btn--ghost btn--sm">Ver OS</a>
+            </li>
+
+            <li class="notif">
+              <div class="notif__icon warning">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg>
+              </div>
+              <div class="notif__body">
+                <div class="notif__title">OS #1281 · Alerta de peça</div>
+                <div class="notif__desc">O estoque do item "Filtro de Óleo PSL35" está abaixo do mínimo.</div>
+              </div>
+              <div class="notif__meta">Há 4 horas</div>
+              <a href="#" class="btn btn--ghost btn--sm">Ver OS</a>
+            </li>
+
+            <li class="notif">
+              <div class="notif__icon info">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/></svg>
+              </div>
+              <div class="notif__body">
+                <div class="notif__title">OS #1278 · Status alterado</div>
+                <div class="notif__desc">O status da OS #1278 foi alterado para "Em Análise".</div>
+              </div>
+              <div class="notif__meta">Há 8 horas</div>
+              <a href="#" class="btn btn--ghost btn--sm">Ver OS</a>
+            </li>
+
+            <li class="notif">
+              <div class="notif__icon success">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="notif__body">
+                <div class="notif__title">OS #1275 · Concluída</div>
+                <div class="notif__desc">A OS #1275 foi concluída com sucesso.</div>
+              </div>
+              <div class="notif__meta">Há 1 dia</div>
+              <a href="#" class="btn btn--ghost btn--sm">Ver OS</a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/loadComponents.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

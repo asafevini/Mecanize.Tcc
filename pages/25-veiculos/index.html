@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="veiculos">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Veículos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Gestão de Veículos</h1>
+            <p class="page-header__subtitle">Visualize e gerencie todos os veículos cadastrados na oficina.</p>
+          </div>
+          <div class="page-header__actions">
+            <a href="../30-marcas-veiculos/index.html" class="btn btn--ghost">
+              <i data-icon="tag" data-size="14"></i> Marcas
+            </a>
+            <a href="../31-modelos-veiculos/index.html" class="btn btn--ghost">
+              <i data-icon="list" data-size="14"></i> Modelos
+            </a>
+            <a href="../26-veiculo-novo/index.html" class="btn btn--primary">
+              <i data-icon="plus" data-size="14"></i> Novo Veículo
+            </a>
+          </div>
+        </div>
+
+        <section class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-card__icon blue"><i data-icon="car" data-size="20"></i></div>
+            <div>
+              <div class="stat-card__label">Total de Veículos</div>
+              <div class="stat-card__value">312</div>
+              <div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i> 9% em relação ao mês anterior</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__icon orange"><i data-icon="wrench" data-size="20"></i></div>
+            <div>
+              <div class="stat-card__label">Em OS Aberta</div>
+              <div class="stat-card__value">28</div>
+              <div class="stat-card__delta">Derivado de ordens_servico</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__icon green"><i data-icon="tag" data-size="20"></i></div>
+            <div>
+              <div class="stat-card__label">Marcas Cadastradas</div>
+              <div class="stat-card__value">14</div>
+              <div class="stat-card__delta">tabela marcas_veiculos</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__icon purple"><i data-icon="list" data-size="20"></i></div>
+            <div>
+              <div class="stat-card__label">Modelos Cadastrados</div>
+              <div class="stat-card__value">68</div>
+              <div class="stat-card__delta">tabela modelos_veiculos</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="table-toolbar">
+            <div class="search-wrap">
+              <input type="text" placeholder="Buscar por placa, modelo ou cliente..." />
+            </div>
+            <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;">
+              <option>Marca: Todas</option>
+              <option>VW</option>
+              <option>Honda</option>
+              <option>Toyota</option>
+              <option>Ford</option>
+              <option>Chevrolet</option>
+              <option>Fiat</option>
+              <option>Jeep</option>
+              <option>Hyundai</option>
+            </select>
+            <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;">
+              <option>Ano: Todos</option>
+              <option>2024</option>
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+              <option>2020</option>
+              <option>Anterior a 2020</option>
+            </select>
+            <button class="btn btn--ghost"><i data-icon="plus" data-size="14"></i> Mais filtros</button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Placa</th>
+                  <th>Veículo</th>
+                  <th>Cor</th>
+                  <th>Ano</th>
+                  <th>Proprietário</th>
+                  <th>Observações</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="plate">EYO-3116</span></td>
+                  <td>
+                    <div class="vehicle-cell">
+                      <div class="vehicle-cell__icon"><i data-icon="car" data-size="16"></i></div>
+                      <div class="user-cell__name">VW Gol</div>
+                    </div>
+                  </td>
+                  <td><span class="color-chip"><span class="color-chip__dot" style="background:#FFFFFF;border:1px solid #CBD5E1;"></span>Branco</span></td>
+                  <td>2015</td>
+                  <td>Ronald</td>
+                  <td class="obs-cell">—</td>
+                  <td>
+                    <div class="row-actions">
+                      <a href="../27-veiculo-visualizar/index.html" class="row-action-btn primary" title="Visualizar"><i data-icon="eye" data-size="16"></i></a>
+                      <a href="../28-veiculo-editar/index.html" class="row-action-btn" title="Editar"><i data-icon="edit" data-size="16"></i></a>
+                      <button class="row-action-btn danger" title="Excluir"><i data-icon="trash" data-size="16"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="plate">ABC-1D23</span></td>
+                  <td>
+                    <div class="vehicle-cell">
+                      <div class="vehicle-cell__icon"><i data-icon="car" data-size="16"></i></div>
+                      <div class="user-cell__name">Honda Civic</div>
+                    </div>
+                  </td>
+                  <td><span class="color-chip"><span class="color-chip__dot" style="background:#C0C0C0;"></span>Prata</span></td>
+                  <td>2018</td>
+                  <td>João da Silva</td>
+                  <td class="obs-cell">Cliente reportou ruído ao frear</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="row-action-btn primary"><i data-icon="eye" data-size="16"></i></button>
+                      <button class="row-action-btn"><i data-icon="edit" data-size="16"></i></button>
+                      <button class="row-action-btn danger"><i data-icon="trash" data-size="16"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="plate">DEF-4G56</span></td>
+                  <td>
+                    <div class="vehicle-cell">
+                      <div class="vehicle-cell__icon"><i data-icon="car" data-size="16"></i></div>
+                      <div class="user-cell__name">Toyota Corolla</div>
+                    </div>
+                  </td>
+                  <td><span class="color-chip"><span class="color-chip__dot" style="background:#0F172A;"></span>Preto</span></td>
+                  <td>2020</td>
+                  <td>Maria Oliveira</td>
+                  <td class="obs-cell">Cliente recorrente</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="row-action-btn primary"><i data-icon="eye" data-size="16"></i></button>
+                      <button class="row-action-btn"><i data-icon="edit" data-size="16"></i></button>
+                      <button class="row-action-btn danger"><i data-icon="trash" data-size="16"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="plate">GHI-7J89</span></td>
+                  <td>
+                    <div class="vehicle-cell">
+                      <div class="vehicle-cell__icon"><i data-icon="car" data-size="16"></i></div>
+                      <div class="user-cell__name">Ford Ranger</div>
+                    </div>
+                  </td>
+                  <td><span class="color-chip"><span class="color-chip__dot" style="background:#FFFFFF;border:1px solid #CBD5E1;"></span>Branco</span></td>
+                  <td>2019</td>
+                  <td>Pedro Santos</td>
+                  <td class="obs-cell">Aguardando pastilha de freio</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="row-action-btn primary"><i data-icon="eye" data-size="16"></i></button>
+                      <button class="row-action-btn"><i data-icon="edit" data-size="16"></i></button>
+                      <button class="row-action-btn danger"><i data-icon="trash" data-size="16"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="plate">JKL-0M12</span></td>
+                  <td>
+                    <div class="vehicle-cell">
+                      <div class="vehicle-cell__icon"><i data-icon="car" data-size="16"></i></div>
+                      <div class="user-cell__name">Chevrolet Onix</div>
+                    </div>
+                  </td>
+                  <td><span class="color-chip"><span class="color-chip__dot" style="background:#DC2626;"></span>Vermelho</span></td>
+                  <td>2021</td>
+                  <td>Ana Ferreira</td>
+                  <td class="obs-cell">—</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="row-action-btn primary"><i data-icon="eye" data-size="16"></i></button>
+                      <button class="row-action-btn"><i data-icon="edit" data-size="16"></i></button>
+                      <button class="row-action-btn danger"><i data-icon="trash" data-size="16"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="plate">NOP-3Q45</span></td>
+                  <td>
+                    <div class="vehicle-cell">
+                      <div class="vehicle-cell__icon"><i data-icon="car" data-size="16"></i></div>
+                      <div class="user-cell__name">Jeep Renegade</div>
+                    </div>
+                  </td>
+                  <td><span class="color-chip"><span class="color-chip__dot" style="background:#94A3B8;"></span>Cinza</span></td>
+                  <td>2018</td>
+                  <td>Lucas Almeida</td>
+                  <td class="obs-cell">Revisão geral em andamento</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="row-action-btn primary"><i data-icon="eye" data-size="16"></i></button>
+                      <button class="row-action-btn"><i data-icon="edit" data-size="16"></i></button>
+                      <button class="row-action-btn danger"><i data-icon="trash" data-size="16"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="plate">YZA-2367</span></td>
+                  <td>
+                    <div class="vehicle-cell">
+                      <div class="vehicle-cell__icon"><i data-icon="car" data-size="16"></i></div>
+                      <div class="user-cell__name">VW Polo</div>
+                    </div>
+                  </td>
+                  <td><span class="color-chip"><span class="color-chip__dot" style="background:#C0C0C0;"></span>Prata</span></td>
+                  <td>2021</td>
+                  <td>Bruno Lima</td>
+                  <td class="obs-cell">Veículo novo · garantia ativa</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="row-action-btn primary"><i data-icon="eye" data-size="16"></i></button>
+                      <button class="row-action-btn"><i data-icon="edit" data-size="16"></i></button>
+                      <button class="row-action-btn danger"><i data-icon="trash" data-size="16"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <span>Mostrando 1 a 7 de 312 resultados</span>
+            <div class="pagination__pages">
+              <button class="pagination__btn">‹</button>
+              <button class="pagination__btn is-active">1</button>
+              <button class="pagination__btn">2</button>
+              <button class="pagination__btn">3</button>
+              <button class="pagination__btn">4</button>
+              <button class="pagination__btn">›</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

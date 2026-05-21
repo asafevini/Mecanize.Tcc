@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="admin">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Configurações</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Configurações de Admin</h1>
+            <p class="page-header__subtitle">Gerencie usuários, permissões e configurações do sistema.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <section class="card">
+            <div class="card__header"><div class="card__title"><i data-icon="users"></i> Gestão de Usuários e Permissões</div></div>
+            <div class="card__body">
+              <p class="text-muted fs-12 mb-12">Gerencie os usuários e as suas funcionalidades do sistema.</p>
+              <div class="user-row"><div class="user-cell"><div class="avatar avatar--sm">CS</div><div><div class="user-cell__name">Carlos Silva</div><div class="user-cell__sub">carlos@mecanize.com</div></div></div><span class="badge badge--purple">Super Admin</span><span class="badge badge--success">Ativo</span><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+              <div class="user-row"><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCA5A5,#DC2626);">AP</div><div><div class="user-cell__name">Ana Paula</div><div class="user-cell__sub">ana.paula@mecanize.com</div></div></div><span class="badge badge--info">Gerente</span><span class="badge badge--success">Ativo</span><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+              <div class="user-row"><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#86EFAC,#16A34A);">MR</div><div><div class="user-cell__name">Marcos Rodrigues</div><div class="user-cell__sub">marcos.r@mecanize.com</div></div></div><span class="badge badge--neutral">Atendente</span><span class="badge badge--success">Ativo</span><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+              <div class="user-row"><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCD34D,#D97706);">LS</div><div><div class="user-cell__name">Lucas Santos</div><div class="user-cell__sub">lucas.s@mecanize.com</div></div></div><span class="badge badge--neutral">Administrativo</span><span class="badge badge--success">Ativo</span><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+              <div class="user-row"><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#A5B4FC,#4338CA);">JF</div><div><div class="user-cell__name">Juliana Ferreira</div><div class="user-cell__sub">juliana.f@mecanize.com</div></div></div><span class="badge badge--neutral">Atendente</span><span class="badge badge--danger">Inativo</span><button class="row-action-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+              <a href="../23-novo-usuario/index.html" class="btn btn--primary mt-16">+ Novo Usuário</a>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title"><i data-icon="settings"></i> Configurações do Sistema</div></div>
+            <div class="card__body">
+              <p class="text-muted fs-12 mb-12">Ative ou desative funcionalidades do sistema.</p>
+              <div class="pref-row"><div><div class="fw-600 fs-13">Backup Automático</div><div class="text-muted fs-12">Realiza backups diários automáticos.</div></div><label class="switch"><input type="checkbox" checked /><span class="switch__slider"></span></label></div>
+              <div class="pref-row"><div><div class="fw-600 fs-13">Notificações por WhatsApp</div><div class="text-muted fs-12">Envia notificações de status via WhatsApp.</div></div><label class="switch"><input type="checkbox" checked /><span class="switch__slider"></span></label></div>
+              <div class="pref-row"><div><div class="fw-600 fs-13">Integração de Pagamentos</div><div class="text-muted fs-12">Permite aceitar pagamentos online.</div></div><label class="switch"><input type="checkbox" checked /><span class="switch__slider"></span></label></div>
+              <div class="pref-row"><div><div class="fw-600 fs-13">Controle de Estoque Avançado</div><div class="text-muted fs-12">Ativa o controle detalhado do estoque.</div></div><label class="switch"><input type="checkbox" checked /><span class="switch__slider"></span></label></div>
+              <div class="pref-row"><div><div class="fw-600 fs-13">Relatórios Financeiros</div><div class="text-muted fs-12">Acessa relatórios financeiros detalhados.</div></div><label class="switch"><input type="checkbox" /><span class="switch__slider"></span></label></div>
+              <div class="pref-row"><div><div class="fw-600 fs-13">Modo de Manutenção</div><div class="text-muted fs-12">Restringe o acesso para manutenções.</div></div><label class="switch"><input type="checkbox" /><span class="switch__slider"></span></label></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title"><i data-icon="activity"></i> Logs de Atividades</div></div>
+            <div class="card__body">
+              <p class="text-muted fs-12 mb-12">Confira as ações recentes realizadas pelos usuários.</p>
+              <div class="log-item"><div class="log-item__icon" style="background:var(--color-info-soft);color:var(--color-info);">i</div><div><div class="log-item__title">Carlos Silva editou a OS #1287</div><div class="text-muted fs-12">Status para "Em Andamento"</div></div><div class="log-item__time">Hoje, 10:42</div></div>
+              <div class="log-item"><div class="log-item__icon" style="background:var(--color-warning-soft);color:var(--color-warning);">!</div><div><div class="log-item__title">Ana Paula criou uma OS</div><div class="text-muted fs-12">OS #1288 · Cliente: Lucas Almeida</div></div><div class="log-item__time">Hoje, 09:13</div></div>
+              <div class="log-item"><div class="log-item__icon" style="background:var(--color-success-soft);color:var(--color-success);">+</div><div><div class="log-item__title">Marcos Rodrigues adicionou cliente</div><div class="text-muted fs-12">Cliente "Oficina Central LTDA"</div></div><div class="log-item__time">Hoje, 08:45</div></div>
+              <div class="log-item"><div class="log-item__icon" style="background:var(--color-info-soft);color:var(--color-info);">i</div><div><div class="log-item__title">Lucas Santos atualizou permissões</div><div class="text-muted fs-12">Permissões do grupo "Atendente"</div></div><div class="log-item__time">Ontem</div></div>
+              <a href="../24-logs-atividades/index.html" class="fs-12 text-secondary mt-12 link-icon" style="display:inline-block;">Ver todos os logs <i data-icon="arrow-right" data-size="12"></i></a>
+            </div>
+          </section>
+        </div>
+
+        <div class="text-center mt-24">
+          <button class="btn btn--primary btn--lg" style="min-width:400px;"><i data-icon="save" data-size="14"></i> Salvar Configurações</button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

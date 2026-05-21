@@ -1,0 +1,60 @@
+.chart-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+.chart-legend .dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.dot--blue { background: #3B82F6; }
+.dot--red { background: #EF4444; }
+
+/* wrappers para o Chart.js */
+.chart-wrap-line {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+
+.donut-wrap {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.donut-canvas-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+}
+.donut-canvas-wrap canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.donut-legend {
+  list-style: none;
+  display: flex; flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  flex: 1;
+  min-width: 180px;
+}
+.donut-legend li {
+  display: flex; align-items: center; gap: 8px;
+  justify-content: space-between;
+}
+.donut-legend .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block;
+}
+.donut-legend b { color: var(--color-text); font-weight: 600; }

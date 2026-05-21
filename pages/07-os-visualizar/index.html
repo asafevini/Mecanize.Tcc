@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="ordens">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · OS #1287</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Ordem de Serviço: #1287</h1>
+            <p class="page-header__subtitle">Visualize os detalhes completos da ordem de serviço.</p>
+          </div>
+          <div class="page-header__actions">
+            <span class="status-pill" style="background: var(--color-info-soft); color: var(--color-info);">
+              <span class="dot" style="background: var(--color-info)"></span> Em Manutenção
+            </span>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <section class="card">
+            <div class="card__header"><div class="card__title"><i data-icon="file-text"></i> Dados do Cliente e Veículo</div></div>
+            <div class="card__body">
+              <div class="kv"><span>Cliente</span><b>João da Silva</b></div>
+              <div class="kv"><span>Veículo</span><b>Honda Civic 2018</b></div>
+              <div class="kv"><span>Placa</span><b>ABC-1D23</b></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title"><i data-icon="wrench"></i> Serviços Realizados</div></div>
+            <div class="card__body">
+              <div class="kv kv--header"><span>Serviços</span></div>
+              <div class="kv kv--simple"><span>Troca de Óleo</span></div>
+              <div class="kv kv--simple"><span>Filtro de Ar</span></div>
+              <div class="kv kv--simple"><span>Revisão Geral</span></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title"><i data-icon="package"></i> Peças e Produtos</div></div>
+            <div class="card__body">
+              <div class="kv kv--header"><span>Item</span></div>
+              <div class="kv kv--simple"><span>Óleo 5W30</span></div>
+              <div class="kv kv--simple"><span>Filtro de Óleo</span></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title"><i data-icon="dollar"></i> Resumo Financeiro</div></div>
+            <div class="card__body">
+              <div class="kv"><span>Total de Serviços</span><b>R$ 550,00</b></div>
+              <div class="kv"><span>Total de Peças</span><b>R$ 300,00</b></div>
+              <div class="kv kv--strong"><span>Total da OS</span><b>R$ 850,00</b></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="page-footer mt-24">
+          <a href="../04-ordens-servico/index.html" class="btn btn--ghost"><i data-icon="arrow-left" data-size="14"></i> Voltar</a>
+          <div class="flex gap-12">
+            <a href="../08-os-editar/index.html" class="btn btn--primary"><i data-icon="edit" data-size="14"></i> Editar OS</a>
+            <button class="btn btn--primary"><i data-icon="printer" data-size="14"></i> Imprimir PDF</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="relatorios">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Serviços Mais Procurados</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Serviços Mais Procurados</h1>
+            <p class="page-header__subtitle">Acompanhe os serviços mais buscados pelos clientes no período selecionado.</p>
+          </div>
+        </div>
+
+        <section class="stat-grid">
+          <div class="stat-card"><div class="stat-card__icon blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div><div class="stat-card__label">Total de Serviços (Mês)</div><div class="stat-card__value">1.248</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i> 10% em relação ao mês anterior</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><div class="stat-card__label">Serviço Mais Rentável</div><div class="stat-card__value">Revisão Geral</div><div class="stat-card__delta">R$ 45.870,00 do faturamento</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg></div><div><div class="stat-card__label">Crescimento vs Mês Anterior</div><div class="stat-card__value">↑ 15%</div><div class="stat-card__delta">Aumento no número de serviços</div></div></div>
+        </section>
+
+        <section class="card">
+          <div class="card__header"><div class="card__title">Top 5 Serviços Mais Procurados</div></div>
+          <div class="card__body">
+            <div class="chart-wrap"><canvas id="topServices"></canvas></div>
+          </div>
+        </section>
+
+        <section class="card mt-24">
+          <div class="card__header"><div class="card__title">Lista de Serviços</div></div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Serviço</th><th>Quantidade</th><th>Faturamento Total</th><th>% do Total</th></tr></thead>
+              <tbody>
+                <tr><td><span class="badge badge--info">Troca de Óleo</span></td><td>532</td><td>R$ 28.450,00</td><td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:120px"><span style="width:90%;"></span></div>34,2%</div></td></tr>
+                <tr><td><span class="badge badge--info">Revisão Geral</span></td><td>287</td><td>R$ 21.300,00</td><td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:120px"><span style="width:60%;"></span></div>21,8%</div></td></tr>
+                <tr><td><span class="badge badge--info">Alinhamento</span></td><td>198</td><td>R$ 14.900,00</td><td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:120px"><span style="width:42%;"></span></div>14,5%</div></td></tr>
+                <tr><td><span class="badge badge--info">Troca de Pastilhas</span></td><td>142</td><td>R$ 9.870,00</td><td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:120px"><span style="width:30%;"></span></div>10,9%</div></td></tr>
+                <tr><td><span class="badge badge--info">Higienização</span></td><td>89</td><td>R$ 6.210,00</td><td><div style="display:flex;align-items:center;gap:10px;"><div class="bar" style="width:120px"><span style="width:18%;"></span></div>7,1%</div></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination"><span>Mostrando 5 serviços mais procurados no período</span></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

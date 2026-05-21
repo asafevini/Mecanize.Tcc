@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="relatorios">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Relatórios</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Relatórios e Insights</h1>
+            <p class="page-header__subtitle">Acompanhe o desempenho da oficina com dados e indicadores atualizados.</p>
+          </div>
+          <div class="page-header__actions">
+            <button class="btn btn--ghost"><i data-icon="calendar" data-size="14"></i> Últimos 30 dias (23/04 - 22/05/2024)</button>
+            <button class="btn btn--ghost"><i data-icon="upload" data-size="14"></i> Exportar PDF/Excel</button>
+          </div>
+        </div>
+
+        <section class="stat-grid">
+          <div class="stat-card"><div class="stat-card__icon blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><div class="stat-card__label">Faturamento Total</div><div class="stat-card__value">R$ 78.540,00</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i>18% em relação ao mês anterior</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div><div><div class="stat-card__label">Ticket Médio</div><div class="stat-card__value">R$ 1.285,90</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i>6% em relação ao mês anterior</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg></div><div><div class="stat-card__label">Crescimento Mensal (%)</div><div class="stat-card__value">18,4%</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i>4% em relação ao mês anterior</div></div></div>
+          <div class="stat-card"><div class="stat-card__icon purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div><div class="stat-card__label">Margem de Lucro</div><div class="stat-card__value">32,7%</div><div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i>2% em relação ao mês anterior</div></div></div>
+        </section>
+
+        <section class="card">
+          <div class="card__header">
+            <div class="card__title">Receita Mensal vs Despesas</div>
+            <select style="height:32px;border:1px solid var(--color-border);border-radius:8px;padding:0 8px;font-size:12px;background:#fff;"><option>Mensal</option><option>Semanal</option></select>
+          </div>
+          <div class="card__body">
+            <div class="chart-legend">
+              <span><i class="dot dot--blue"></i> Receita (R$)</span>
+              <span><i class="dot dot--red"></i> Despesa (R$)</span>
+            </div>
+            <div class="chart-wrap"><canvas id="barChart"></canvas></div>
+          </div>
+        </section>
+
+        <section class="grid-2 mt-24">
+          <div class="card">
+            <div class="card__header">
+              <div class="card__title">Serviços mais Procurados</div>
+              <a href="../19-servicos-mais-procurados/index.html" class="fs-12 text-secondary">Ver detalhes <i data-icon="arrow-right" data-size="12"></i></a>
+            </div>
+            <div class="card__body">
+              <div class="bar-list">
+                <div class="bar-item"><div class="bar-item__label"><span>Troca de Óleo</span><span class="text-secondary">34,2%</span></div><div class="bar"><span style="width:78%;"></span></div></div>
+                <div class="bar-item"><div class="bar-item__label"><span>Revisão Geral</span><span class="text-secondary">21,8%</span></div><div class="bar"><span style="width:55%;"></span></div></div>
+                <div class="bar-item"><div class="bar-item__label"><span>Freios</span><span class="text-secondary">14,5%</span></div><div class="bar"><span style="width:42%;"></span></div></div>
+                <div class="bar-item"><div class="bar-item__label"><span>Suspensão</span><span class="text-secondary">10,9%</span></div><div class="bar"><span style="width:30%;"></span></div></div>
+                <div class="bar-item"><div class="bar-item__label"><span>Outros Serviços</span><span class="text-secondary">18,6%</span></div><div class="bar"><span style="width:25%;"></span></div></div>
+              </div>
+              <a href="../19-servicos-mais-procurados/index.html" class="fs-12 text-secondary mt-12" style="display:inline-block;">Ver todos os serviços <i data-icon="arrow-right" data-size="12"></i></a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <div class="card__title">Produtividade por Mecânico</div>
+              <a href="../20-produtividade/index.html" class="fs-12 text-secondary">Ver detalhes <i data-icon="arrow-right" data-size="12"></i></a>
+            </div>
+            <div class="card__body">
+              <div class="prod-list">
+                <div class="prod-item">
+                  <div class="user-cell"><div class="avatar avatar--sm">JS</div><div><div class="user-cell__name">João da Silva</div></div></div>
+                  <div class="prod-item__metric"><span>OS Concluídas</span><b>28</b></div>
+                  <div class="prod-item__metric"><span>Horas Trabalhadas</span><b>72h</b></div>
+                  <div class="prod-item__bar"><div class="bar"><span style="width:92%;background:var(--color-success);"></span></div></div>
+                </div>
+                <div class="prod-item">
+                  <div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCA5A5,#DC2626);">MC</div><div><div class="user-cell__name">Maria Costa</div></div></div>
+                  <div class="prod-item__metric"><span>OS Concluídas</span><b>24</b></div>
+                  <div class="prod-item__metric"><span>Horas Trabalhadas</span><b>68h</b></div>
+                  <div class="prod-item__bar"><div class="bar"><span style="width:80%;background:var(--color-success);"></span></div></div>
+                </div>
+                <div class="prod-item">
+                  <div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCD34D,#D97706);">PS</div><div><div class="user-cell__name">Pedro Souza</div></div></div>
+                  <div class="prod-item__metric"><span>OS Concluídas</span><b>20</b></div>
+                  <div class="prod-item__metric"><span>Horas Trabalhadas</span><b>61h</b></div>
+                  <div class="prod-item__bar"><div class="bar"><span style="width:65%;background:var(--color-success);"></span></div></div>
+                </div>
+                <div class="prod-item">
+                  <div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#A5B4FC,#4338CA);">LA</div><div><div class="user-cell__name">Lucas Almeida</div></div></div>
+                  <div class="prod-item__metric"><span>OS Concluídas</span><b>16</b></div>
+                  <div class="prod-item__metric"><span>Horas Trabalhadas</span><b>54h</b></div>
+                  <div class="prod-item__bar"><div class="bar"><span style="width:50%;background:var(--color-success);"></span></div></div>
+                </div>
+              </div>
+              <a href="../20-produtividade/index.html" class="fs-12 text-secondary mt-12" style="display:inline-block;">Ver todos os mecânicos <i data-icon="arrow-right" data-size="12"></i></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

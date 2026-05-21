@@ -1,0 +1,23 @@
+.kv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 13px;
+}
+.kv:last-child { border-bottom: none; }
+.kv span { color: var(--color-text-secondary); }
+.kv b { color: var(--color-text); font-weight: 600; }
+.kv--header span { color: var(--color-text-secondary); font-weight: 600; font-size: 12px; text-transform: uppercase; }
+.kv--simple { color: var(--color-text); }
+.kv--simple span { color: var(--color-text); font-weight: 500; }
+.kv--strong b { font-size: 16px; color: var(--color-primary); }
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}

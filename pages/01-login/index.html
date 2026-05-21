@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Entrar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="login">
+
+    <!-- ==================== LADO ESQUERDO (IMAGEM) ==================== -->
+    <section class="login__left">
+      <img src="../../assets/img/fundo.png" alt="Mecanize" class="login__image" />
+    </section>
+
+    <!-- ==================== LADO DIREITO ==================== -->
+    <section class="login__right">
+      <div class="login__right-bg" aria-hidden="true">
+        <div class="dot-pattern"></div>
+        <span class="glow"></span>
+      </div>
+
+      <form class="login-card" id="loginForm" novalidate>
+        <div class="login-card__head">
+          <h2 class="login-card__title">Entrar</h2>
+        </div>
+
+        <div class="login-field">
+          <label for="email">E-mail ou usuário</label>
+          <div class="login-input">
+            <i data-icon="user" data-size="16"></i>
+            <input type="text" id="email" placeholder="carlos@mecanize.com" autocomplete="username" required />
+          </div>
+        </div>
+
+        <div class="login-field">
+          <div class="login-field__top">
+            <label for="password">Senha</label>
+            <a href="#" class="login-link">Esqueceu a senha?</a>
+          </div>
+          <div class="login-input">
+            <i data-icon="lock" data-size="16"></i>
+            <input type="password" id="password" placeholder="Digite sua senha" autocomplete="current-password" required />
+            <button type="button" class="login-input__toggle" id="togglePassword" aria-label="Mostrar senha">
+              <i data-icon="eye" data-size="16"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary login-submit">
+          <span>Entrar</span>
+          <i data-icon="arrow-right" data-size="14"></i>
+        </button>
+      </form>
+
+      <div class="login__right-footer">
+        © 2024 Mecanize · <a href="#">Termos</a> · <a href="#">Privacidade</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="../../assets/js/loadComponents.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

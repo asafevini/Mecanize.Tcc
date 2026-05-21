@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="clientes">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Cliente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Visualizar Cliente: João Pedro da Silva</h1>
+            <p class="page-header__subtitle">Confira os detalhes e informações do cliente.</p>
+          </div>
+          <div class="page-header__actions">
+            <span class="status-pill" style="background:var(--color-success-soft); color:var(--color-success);">
+              <span class="dot" style="background: var(--color-success)"></span> Status: Ativo
+            </span>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <section class="card">
+            <div class="card__header"><div class="card__title">1. Informações Pessoais</div></div>
+            <div class="card__body">
+              <div class="kv"><span>Nome Completo</span><b>João Pedro da Silva</b></div>
+              <div class="kv"><span>CPF/CNPJ</span><b>123.456.789-09</b></div>
+              <div class="kv"><span>Data de Nascimento</span><b>15/04/1985</b></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title">2. Contato</div></div>
+            <div class="card__body">
+              <div class="kv"><span>E-mail</span><b>joaopedro.silva@email.com</b></div>
+              <div class="kv"><span>Telefone</span><b>(11) 98765-4321</b></div>
+              <div class="kv"><span>WhatsApp</span><b>(11) 91234-5678</b></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title">3. Endereço</div></div>
+            <div class="card__body">
+              <div class="kv"><span>Rua</span><b>Rua das Flores</b></div>
+              <div class="kv"><span>Número</span><b>250</b></div>
+              <div class="kv"><span>Bairro</span><b>Jardim das Palmeiras</b></div>
+              <div class="kv"><span>CEP</span><b>01453-000</b></div>
+              <div class="kv"><span>Cidade</span><b>São Paulo</b></div>
+              <div class="kv"><span>Estado</span><b>SP</b></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title">4. Veículos Associados</div></div>
+            <div class="card__body">
+              <div class="vehicle-card"><div class="vehicle-card__icon"><i data-icon="car" data-size="18"></i></div><div><div class="fw-600">Honda Civic EXL 2.0</div><div class="text-muted fs-12">ABC-4D56 · Prata</div></div><span class="badge badge--success" style="margin-left:auto;">Ativo</span></div>
+              <div class="vehicle-card"><div class="vehicle-card__icon"><i data-icon="car" data-size="18"></i></div><div><div class="fw-600">Toyota Yaris SRX 2.8</div><div class="text-muted fs-12">DEF-7G89 · Preto</div></div><span class="badge badge--success" style="margin-left:auto;">Ativo</span></div>
+              <div class="vehicle-card"><div class="vehicle-card__icon"><i data-icon="car" data-size="18"></i></div><div><div class="fw-600">Ford Fiesta SE 1.6</div><div class="text-muted fs-12">GHI-1J23 · Branco</div></div><span class="badge badge--success" style="margin-left:auto;">Ativo</span></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="page-footer mt-24">
+          <div class="flex gap-12">
+            <a href="../11-cliente-editar/index.html" class="btn btn--primary"><i data-icon="edit" data-size="14"></i> Editar Cliente</a>
+            <a href="../09-clientes/index.html" class="btn btn--ghost">← Voltar para Lista</a>
+          </div>
+          <button class="btn btn--danger-ghost"><i data-icon="ban" data-size="14"></i> Desativar Cliente</button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

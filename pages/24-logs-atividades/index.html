@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="admin">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Logs de Atividades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Logs de Atividades</h1>
+            <p class="page-header__subtitle">Acompanhe todas as ações realizadas no sistema.</p>
+          </div>
+        </div>
+
+        <section class="card">
+          <div class="table-toolbar">
+            <div class="form-field" style="flex: 1; min-width: 200px;">
+              <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;width:100%;">
+                <option>Filtrar por Usuário</option><option>Selecione um usuário</option>
+              </select>
+            </div>
+            <div class="form-field" style="flex: 1; min-width: 200px;">
+              <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;width:100%;">
+                <option>Tipo de Ação</option>
+                <option>Edit</option><option>Delete</option><option>Create</option>
+              </select>
+            </div>
+            <div class="form-field" style="flex: 1; min-width: 200px;">
+              <select style="height:38px;border:1px solid var(--color-border);border-radius:10px;padding:0 12px;font-size:13px;background:#fff;width:100%;">
+                <option>Módulo</option><option>Todos os módulos</option>
+              </select>
+            </div>
+            <div class="form-field" style="flex: 1; min-width: 200px;">
+              <input type="text" placeholder="Período: 23/05/2024 - 30/05/2025" style="height:38px;" />
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Data e Hora</th><th>Usuário</th><th>Ação Realizada</th><th>Módulo</th><th>IP/Origem</th></tr></thead>
+              <tbody>
+                <tr><td>Hoje, 10:42:15</td><td><div class="user-cell"><div class="avatar avatar--sm">CS</div><div><div class="user-cell__name">Carlos Silva</div><div class="user-cell__sub">carlos@mecanize.com</div></div></div></td><td><span class="badge badge--info"><i data-icon="edit" data-size="11"></i> edit</span> editou a OS #1287 para "Em Andamento"</td><td><span class="badge badge--neutral">Ordens de Serviço</span></td><td>192.168.1.10<div class="text-muted fs-12">Firefox / Windows</div></td></tr>
+                <tr><td>Hoje, 09:13:22</td><td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCA5A5,#DC2626);">MR</div><div><div class="user-cell__name">Marcos Rodrigues</div><div class="user-cell__sub">marcos@mecanize.com</div></div></div></td><td><span class="badge badge--danger"><i data-icon="trash" data-size="11"></i> delete</span> excluiu o cliente "Geral Auto WSC"</td><td><span class="badge badge--neutral">Clientes</span></td><td>192.168.1.15<div class="text-muted fs-12">Chrome / Windows</div></td></tr>
+                <tr><td>Ontem, 16:32:09</td><td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCD34D,#D97706);">AP</div><div><div class="user-cell__name">Ana Paula Saraiva</div><div class="user-cell__sub">ana.paula@mecanize.com</div></div></div></td><td><span class="badge badge--success"><i data-icon="plus" data-size="11"></i> create</span> alterou configurações de integração de pagamentos</td><td><span class="badge badge--neutral">Configurações</span></td><td>192.168.1.20<div class="text-muted fs-12">Edge / Windows</div></td></tr>
+                <tr><td>Ontem, 14:18:45</td><td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#86EFAC,#16A34A);">LS</div><div><div class="user-cell__name">Lucas Santos</div><div class="user-cell__sub">lucas@mecanize.com</div></div></div></td><td><span class="badge badge--info"><i data-icon="edit" data-size="11"></i> edit</span> atualizou permissões para "Atendente"</td><td><span class="badge badge--neutral">Usuários e Permissões</span></td><td>192.168.1.30<div class="text-muted fs-12">Chrome / Windows</div></td></tr>
+                <tr><td>19/05/2025, 11:21:34</td><td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#A5B4FC,#4338CA);">JF</div><div><div class="user-cell__name">Juliana Ferreira</div><div class="user-cell__sub">juliana@mecanize.com</div></div></div></td><td><span class="badge badge--success"><i data-icon="plus" data-size="11"></i> create</span> cadastrou cliente "Oficina Central LTDA"</td><td><span class="badge badge--neutral">Clientes</span></td><td>192.168.1.40<div class="text-muted fs-12">Firefox / Mac OS</div></td></tr>
+                <tr><td>19/05/2025, 09:55:18</td><td><div class="user-cell"><div class="avatar avatar--sm">CS</div><div><div class="user-cell__name">Carlos Silva</div><div class="user-cell__sub">carlos@mecanize.com</div></div></div></td><td><span class="badge badge--info"><i data-icon="edit" data-size="11"></i> edit</span> produto "Óleo 10W40"</td><td><span class="badge badge--neutral">Produtos</span></td><td>192.168.1.10<div class="text-muted fs-12">Firefox / Windows</div></td></tr>
+                <tr><td>18/05/2025, 17:32:11</td><td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCA5A5,#DC2626);">MR</div><div><div class="user-cell__name">Marcos Rodrigues</div><div class="user-cell__sub">marcos@mecanize.com</div></div></div></td><td><span class="badge badge--danger"><i data-icon="trash" data-size="11"></i> delete</span> cancelou a OS #1276</td><td><span class="badge badge--neutral">Ordens de Serviço</span></td><td>192.168.1.15<div class="text-muted fs-12">Chrome / Windows</div></td></tr>
+                <tr><td>18/05/2025, 09:11:55</td><td><div class="user-cell"><div class="avatar avatar--sm" style="background:linear-gradient(135deg,#FCD34D,#D97706);">AP</div><div><div class="user-cell__name">Ana Paula Saraiva</div><div class="user-cell__sub">ana.paula@mecanize.com</div></div></div></td><td><span class="badge badge--success"><i data-icon="plus" data-size="11"></i> create</span> usuário "Marcos Rodrigues"</td><td><span class="badge badge--neutral">Usuários e Permissões</span></td><td>192.168.1.20<div class="text-muted fs-12">Edge / Windows</div></td></tr>
+                <tr><td>17/05/2025, 15:08:23</td><td><div class="user-cell"><div class="avatar avatar--sm">CS</div><div><div class="user-cell__name">Carlos Silva</div><div class="user-cell__sub">carlos@mecanize.com</div></div></div></td><td><span class="badge badge--info"><i data-icon="edit" data-size="11"></i> edit</span> editou Ordem de Serviço #1285</td><td><span class="badge badge--neutral">Ordens de Serviço</span></td><td>192.168.1.10<div class="text-muted fs-12">Firefox / Windows</div></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <span>Mostrando 1 a 10 de 192 registros</span>
+            <div class="pagination__pages">
+              <button class="pagination__btn">‹</button>
+              <button class="pagination__btn is-active">1</button>
+              <button class="pagination__btn">2</button>
+              <button class="pagination__btn">3</button>
+              <button class="pagination__btn">›</button>
+            </div>
+            <span class="text-muted fs-12">Registros por página: 10</span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

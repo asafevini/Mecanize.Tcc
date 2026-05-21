@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="inicio">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Meu Perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Meu Perfil</h1>
+            <p class="page-header__subtitle">Gerencie suas informações pessoais, senha e preferências.</p>
+          </div>
+        </div>
+
+        <section class="card">
+          <div class="card__header"><div class="card__title"><i data-icon="user"></i> Dados Pessoais</div><span class="text-secondary fs-12">Visualize suas informações pessoais</span></div>
+          <div class="card__body">
+            <div class="form-row">
+              <div class="form-field"><label>Nome Completo</label><input type="text" value="Carlos Silva" /></div>
+              <div class="form-field"><label>E-mail</label><input type="email" value="carlos.silva@mecanize.com" /></div>
+            </div>
+            <div class="form-row mt-12">
+              <div class="form-field"><label>Cargo</label><input type="text" value="Administrador" disabled /></div>
+              <div class="form-field"><label>Telefone</label><input type="text" value="(11) 99999-9999" /></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card mt-24">
+          <div class="card__header"><div class="card__title"><i data-icon="lock"></i> Alteração de Senha</div><span class="text-secondary fs-12">Altere sua senha de acesso</span></div>
+          <div class="card__body">
+            <div class="form-row">
+              <div class="form-field"><label>Senha Atual</label><input type="password" placeholder="Digite sua senha atual" /></div>
+              <div class="form-field"><label>Nova Senha</label><input type="password" placeholder="Digite sua nova senha" /></div>
+              <div class="form-field"><label>Confirmar Nova Senha</label><input type="password" placeholder="Confirme sua nova senha" /></div>
+            </div>
+            <div class="text-right mt-16">
+              <button class="btn btn--primary">Atualizar Senha</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card mt-24">
+          <div class="card__header"><div class="card__title"><i data-icon="bell"></i> Preferências de Notificação</div><span class="text-secondary fs-12">Configure como deseja receber notificações</span></div>
+          <div class="card__body">
+            <div class="pref-row">
+              <div>
+                <div class="fw-600 fs-13">Ordens de serviço atribuídas</div>
+                <div class="text-muted fs-12">Receba notificações quando uma nova OS for atribuída a você.</div>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="switch__slider"></span></label>
+            </div>
+            <div class="pref-row">
+              <div>
+                <div class="fw-600 fs-13">Atualizações de OS</div>
+                <div class="text-muted fs-12">Receba notificações sobre alterações em ordens de serviço acompanhadas por você.</div>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="switch__slider"></span></label>
+            </div>
+            <div class="pref-row">
+              <div>
+                <div class="fw-600 fs-13">Orçamentos aprovados</div>
+                <div class="text-muted fs-12">Receba notificações quando um orçamento for aprovado.</div>
+              </div>
+              <label class="switch"><input type="checkbox" /><span class="switch__slider"></span></label>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

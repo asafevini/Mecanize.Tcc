@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="produtos">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Produto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <h1 class="page-header__title">Visualizar Produto: Óleo Lubrificante 5W30</h1>
+            <p class="page-header__subtitle">Consulte os detalhes e informações do produto no sistema.</p>
+          </div>
+          <div class="page-header__actions">
+            <span class="status-pill" style="background:var(--color-success-soft);color:var(--color-success);">
+              <span class="dot" style="background:var(--color-success)"></span> Status: Em Estoque
+            </span>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <section class="card">
+            <div class="card__header"><div class="card__title">1. Informações Básicas</div></div>
+            <div class="card__body">
+              <div class="kv"><span>Nome do Produto</span><b>Óleo Lubrificante 5W30 Sintético</b></div>
+              <div class="kv"><span>SKU</span><b>OLE-5W30</b></div>
+              <div class="kv"><span>Categoria</span><b>Lubrificantes</b></div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card__header"><div class="card__title">2. Estoque e Preço</div></div>
+            <div class="card__body">
+              <div class="kv"><span>Estoque</span><b>48</b></div>
+              <div class="kv"><span>Preço de Custo</span><b>R$ 69,90</b></div>
+              <div class="kv"><span>Preço de Venda</span><b>R$ 89,90</b></div>
+              <div class="kv"><span>Margem de Lucro</span><b class="text-success">28,60%</b></div>
+            </div>
+          </section>
+
+          <section class="card" style="grid-column: 1/-1;">
+            <div class="card__header"><div class="card__title">3. Descrição</div></div>
+            <div class="card__body">
+              <p style="color: var(--color-text-secondary); line-height: 1.6;">Óleo lubrificante sintético de alta performance, desenvolvido para motores a gasolina, etanol, flex e diesel leve. Proporciona máxima proteção contra o desgaste, maior economia de combustível e excelente desempenho em diversas condições de uso.</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="page-footer mt-24">
+          <div class="flex gap-12">
+            <a href="../16-produto-editar/index.html" class="btn btn--primary"><i data-icon="edit" data-size="14"></i> Editar Produto</a>
+            <a href="../14-produtos/index.html" class="btn btn--ghost">← Voltar para Lista</a>
+          </div>
+          <button class="btn btn--danger-ghost"><i data-icon="trash" data-size="14"></i> Excluir</button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/loadComponents.js" defer></script>
+</body>
+</html>

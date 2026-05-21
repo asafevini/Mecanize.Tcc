@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="./">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Mapa de Telas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/global.css" />
+  <style>
+    body { background: #0F172A; color: white; min-height: 100vh; }
+    .map {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 60px 32px;
+    }
+    .map__head {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .map__logo {
+      width: 180px;
+      margin: 0 auto 20px;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+    .map__title { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+    .map__sub { color: #94A3B8; font-size: 14px; max-width: 580px; margin: 0 auto; }
+
+    .map__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .map-card {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 18px 20px;
+      color: white;
+      text-decoration: none;
+      transition: transform .15s, border-color .15s, background .15s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .map-card:hover {
+      background: #334155;
+      border-color: #3B82F6;
+      transform: translateY(-2px);
+    }
+    .map-card__num {
+      font-size: 11px;
+      color: #60A5FA;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .map-card__title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .map-card__desc {
+      font-size: 12px;
+      color: #94A3B8;
+      line-height: 1.5;
+    }
+    .map-card__tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #0F172A;
+      color: #94A3B8;
+      align-self: flex-start;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .map__section {
+      font-size: 12px;
+      color: #60A5FA;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 40px 0 14px;
+    }
+    .map__section:first-of-type { margin-top: 0; }
+
+    .map__footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #64748B;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="map">
+    <div class="map__head">
+      <img src="./img/assets/logo.png" alt="Mecanize" class="map__logo" />
+      <div class="map__title">Mapa de Telas — Mecanize</div>
+      <div class="map__sub">Protótipo HTML/CSS/JS de todas as 24 telas do sistema. Clique em qualquer card para abrir a tela correspondente.</div>
+    </div>
+
+    <div class="map__section">Acesso</div>
+    <div class="map__grid">
+      <a href="./pages/01-login/index.html" class="map-card">
+        <div class="map-card__num">01</div>
+        <div class="map-card__title">Login</div>
+        <div class="map-card__desc">Tela de acesso ao sistema com usuário e senha.</div>
+        <span class="map-card__tag">Público</span>
+      </a>
+    </div>
+
+    <div class="map__section">Dashboard</div>
+    <div class="map__grid">
+      <a href="./pages/02-dashboard/index.html" class="map-card">
+        <div class="map-card__num">02</div>
+        <div class="map-card__title">Dashboard / Início</div>
+        <div class="map-card__desc">Visão geral com KPIs, fluxo de OS, status e últimos orçamentos.</div>
+      </a>
+      <a href="./pages/03-notificacoes/index.html" class="map-card">
+        <div class="map-card__num">03</div>
+        <div class="map-card__title">Notificações</div>
+        <div class="map-card__desc">Central de avisos da oficina (status de OS, alertas de peça).</div>
+      </a>
+    </div>
+
+    <div class="map__section">Ordens de Serviço</div>
+    <div class="map__grid">
+      <a href="./pages/04-ordens-servico/index.html" class="map-card">
+        <div class="map-card__num">04</div>
+        <div class="map-card__title">Ordens de Serviço (Ativas)</div>
+        <div class="map-card__desc">Listagem de OS abertas com filtros e ações.</div>
+      </a>
+      <a href="./pages/05-ordens-arquivadas/index.html" class="map-card">
+        <div class="map-card__num">05</div>
+        <div class="map-card__title">OS Arquivadas</div>
+        <div class="map-card__desc">Histórico de OS concluídas e arquivadas.</div>
+      </a>
+      <a href="./pages/06-os-nova/index.html" class="map-card">
+        <div class="map-card__num">06</div>
+        <div class="map-card__title">Nova Ordem de Serviço</div>
+        <div class="map-card__desc">Formulário completo de criação com itens, peças e totais.</div>
+      </a>
+      <a href="./pages/07-os-visualizar/index.html" class="map-card">
+        <div class="map-card__num">07</div>
+        <div class="map-card__title">Visualizar OS</div>
+        <div class="map-card__desc">Detalhamento de uma OS específica (read-only).</div>
+      </a>
+      <a href="./pages/08-os-editar/index.html" class="map-card">
+        <div class="map-card__num">08</div>
+        <div class="map-card__title">Editar OS</div>
+        <div class="map-card__desc">Atualização dos dados e itens de uma OS existente.</div>
+      </a>
+    </div>
+
+    <div class="map__section">Clientes</div>
+    <div class="map__grid">
+      <a href="./pages/09-clientes/index.html" class="map-card">
+        <div class="map-card__num">09</div>
+        <div class="map-card__title">Gestão de Clientes</div>
+        <div class="map-card__desc">Lista de clientes ativos com totalizadores e filtros.</div>
+      </a>
+      <a href="./pages/10-cliente-novo/index.html" class="map-card">
+        <div class="map-card__num">10</div>
+        <div class="map-card__title">Novo Cliente</div>
+        <div class="map-card__desc">Cadastro completo com dados pessoais, endereço e contatos.</div>
+      </a>
+      <a href="./pages/11-cliente-editar/index.html" class="map-card">
+        <div class="map-card__num">11</div>
+        <div class="map-card__title">Editar Cliente</div>
+        <div class="map-card__desc">Atualização dos dados do cliente e veículos associados.</div>
+      </a>
+      <a href="./pages/12-cliente-visualizar/index.html" class="map-card">
+        <div class="map-card__num">12</div>
+        <div class="map-card__title">Visualizar Cliente</div>
+        <div class="map-card__desc">Página de detalhes do cliente com veículos.</div>
+      </a>
+      <a href="./pages/13-clientes-desativados/index.html" class="map-card">
+        <div class="map-card__num">13</div>
+        <div class="map-card__title">Clientes Desativados</div>
+        <div class="map-card__desc">Lista de clientes desativados com opção de reativação.</div>
+      </a>
+    </div>
+
+    <div class="map__section">Veículos</div>
+    <div class="map__grid">
+      <a href="./pages/25-veiculos/index.html" class="map-card">
+        <div class="map-card__num">25</div>
+        <div class="map-card__title">Gestão de Veículos</div>
+        <div class="map-card__desc">Listagem de todos os veículos cadastrados com status, proprietário e ações.</div>
+      </a>
+      <a href="./pages/26-veiculo-novo/index.html" class="map-card">
+        <div class="map-card__num">26</div>
+        <div class="map-card__title">Novo Veículo</div>
+        <div class="map-card__desc">Cadastro com identificação, dados, características e proprietário.</div>
+      </a>
+      <a href="./pages/27-veiculo-visualizar/index.html" class="map-card">
+        <div class="map-card__num">27</div>
+        <div class="map-card__title">Visualizar Veículo</div>
+        <div class="map-card__desc">Detalhamento completo + histórico de OS do veículo.</div>
+      </a>
+      <a href="./pages/28-veiculo-editar/index.html" class="map-card">
+        <div class="map-card__num">28</div>
+        <div class="map-card__title">Editar Veículo</div>
+        <div class="map-card__desc">Edição dos dados do veículo (placa, marca, modelo, cor, proprietário…).</div>
+      </a>
+    </div>
+
+    <div class="map__section">Produtos</div>
+    <div class="map__grid">
+      <a href="./pages/14-produtos/index.html" class="map-card">
+        <div class="map-card__num">14</div>
+        <div class="map-card__title">Gestão de Produtos</div>
+        <div class="map-card__desc">Inventário, estoque baixo e valor total.</div>
+      </a>
+      <a href="./pages/15-produto-novo/index.html" class="map-card">
+        <div class="map-card__num">15</div>
+        <div class="map-card__title">Novo Produto</div>
+        <div class="map-card__desc">Cadastro com identificação, estoque e financeiro.</div>
+      </a>
+      <a href="./pages/16-produto-editar/index.html" class="map-card">
+        <div class="map-card__num">16</div>
+        <div class="map-card__title">Editar Produto</div>
+        <div class="map-card__desc">Atualização de informações e preços.</div>
+      </a>
+      <a href="./pages/17-produto-visualizar/index.html" class="map-card">
+        <div class="map-card__num">17</div>
+        <div class="map-card__title">Visualizar Produto</div>
+        <div class="map-card__desc">Detalhamento completo do produto.</div>
+      </a>
+    </div>
+
+    <div class="map__section">Relatórios e Insights</div>
+    <div class="map__grid">
+      <a href="./pages/18-relatorios/index.html" class="map-card">
+        <div class="map-card__num">18</div>
+        <div class="map-card__title">Relatórios e Insights</div>
+        <div class="map-card__desc">Painel de indicadores financeiros e operacionais.</div>
+      </a>
+      <a href="./pages/19-servicos-mais-procurados/index.html" class="map-card">
+        <div class="map-card__num">19</div>
+        <div class="map-card__title">Serviços Mais Procurados</div>
+        <div class="map-card__desc">Top 5 serviços com gráfico e tabela detalhada.</div>
+      </a>
+      <a href="./pages/20-produtividade/index.html" class="map-card">
+        <div class="map-card__num">20</div>
+        <div class="map-card__title">Produtividade por Mecânico</div>
+        <div class="map-card__desc">Ranking de mecânicos por desempenho.</div>
+      </a>
+    </div>
+
+    <div class="map__section">Administração</div>
+    <div class="map__grid">
+      <a href="./pages/21-meu-perfil/index.html" class="map-card">
+        <div class="map-card__num">21</div>
+        <div class="map-card__title">Meu Perfil</div>
+        <div class="map-card__desc">Dados pessoais, alteração de senha e preferências.</div>
+      </a>
+      <a href="./pages/22-config-admin/index.html" class="map-card">
+        <div class="map-card__num">22</div>
+        <div class="map-card__title">Configurações de Admin</div>
+        <div class="map-card__desc">Usuários, permissões, configurações e logs.</div>
+      </a>
+      <a href="./pages/23-novo-usuario/index.html" class="map-card">
+        <div class="map-card__num">23</div>
+        <div class="map-card__title">Novo Usuário</div>
+        <div class="map-card__desc">Cadastro de usuário com cargo e permissões.</div>
+      </a>
+      <a href="./pages/24-logs-atividades/index.html" class="map-card">
+        <div class="map-card__num">24</div>
+        <div class="map-card__title">Logs de Atividades</div>
+        <div class="map-card__desc">Auditoria das ações realizadas no sistema.</div>
+      </a>
+    </div>
+
+    <div class="map__footer">
+      Projeto front-end estático · HTML5 + CSS3 + JavaScript vanilla · Sidebar e Topbar reutilizáveis via <code>fetch()</code>.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-base="../../" data-active="inicio">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecanize · Início</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <div data-component="sidebar"></div>
+
+    <div class="main">
+      <div data-component="topbar"></div>
+
+      <main class="content">
+        <!-- Stat cards -->
+        <section class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-card__icon blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div class="stat-card__label">OS Abertas</div>
+              <div class="stat-card__value">28</div>
+              <div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i> 12% em relação à semana anterior</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card__icon orange">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <div>
+              <div class="stat-card__label">Aguardando Peças</div>
+              <div class="stat-card__value">15</div>
+              <div class="stat-card__delta negative"><i data-icon="trending-down" data-size="12"></i> 3% em relação à semana anterior</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card__icon green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <div class="stat-card__label">Faturamento Mensal</div>
+              <div class="stat-card__value">R$ 78.540,00</div>
+              <div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i> 18% em relação ao mês anterior</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card__icon purple">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+            </div>
+            <div>
+              <div class="stat-card__label">Orçamentos Pendentes</div>
+              <div class="stat-card__value">34</div>
+              <div class="stat-card__delta"><i data-icon="trending-up" data-size="12"></i> 5% em relação à semana anterior</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Charts -->
+        <section class="grid-2">
+          <div class="card">
+            <div class="card__header">
+              <div>
+                <div class="card__title">Fluxo de OS vs Receita</div>
+              </div>
+              <select class="form-field" style="height:32px;border:1px solid var(--color-border);border-radius:8px;padding:0 8px;font-size:12px;background:#fff;">
+                <option>Esta semana</option><option>Este mês</option><option>Este ano</option>
+              </select>
+            </div>
+            <div class="card__body">
+              <div class="chart-legend">
+                <span><i class="dot dot--blue"></i> Ordens de Serviço</span>
+                <span><i class="dot dot--red"></i> Receita (R$)</span>
+              </div>
+              <div class="chart-wrap-line">
+                <canvas id="flowChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <div class="card__title">Status das OS</div>
+            </div>
+            <div class="card__body donut-wrap">
+              <div class="donut-canvas-wrap">
+                <canvas id="donutChart"></canvas>
+              </div>
+              <ul class="donut-legend">
+                <li><span class="dot" style="background:#10B981"></span> Concluídas <b>36 (45%)</b></li>
+                <li><span class="dot" style="background:#3B82F6"></span> Em andamento <b>28 (35%)</b></li>
+                <li><span class="dot" style="background:#F59E0B"></span> Pendentes <b>16 (20%)</b></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recent table -->
+        <section class="card mt-24">
+          <div class="card__header">
+            <div class="card__title">Relatório de Orçamentos</div>
+            <a href="#" class="text-secondary fs-12 link-icon">Ver todos <i data-icon="arrow-right" data-size="12"></i></a>
+          </div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Cliente</th>
+                  <th>Veículo</th>
+                  <th>Valor do Orçamento</th>
+                  <th>Status</th>
+                  <th>Data</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="id-col">#1287</td><td>João da Silva</td><td>Honda Civic 2018</td><td>R$ 2.830,00</td><td><span class="badge badge--success"><span class="badge__dot"></span>Pago</span></td><td>22/05/2024</td><td><div class="row-actions"><button class="row-action-btn primary" title="Ver"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></td></tr>
+                <tr><td class="id-col">#1286</td><td>Maria Oliveira</td><td>Toyota Corolla 2020</td><td>R$ 1.750,00</td><td><span class="badge badge--success"><span class="badge__dot"></span>Aprovado</span></td><td>22/05/2024</td><td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></td></tr>
+                <tr><td class="id-col">#1285</td><td>Pedro Santos</td><td>Ford Ranger 2019</td><td>R$ 4.120,00</td><td><span class="badge badge--warning"><span class="badge__dot"></span>Pendente</span></td><td>21/05/2024</td><td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></td></tr>
+                <tr><td class="id-col">#1284</td><td>Ana Ferreira</td><td>Chevrolet Onix 2021</td><td>R$ 980,00</td><td><span class="badge badge--success"><span class="badge__dot"></span>Aprovado</span></td><td>20/05/2024</td><td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></td></tr>
+                <tr><td class="id-col">#1283</td><td>Lucas Almeida</td><td>Jeep Renegade 2018</td><td>R$ 3.250,00</td><td><span class="badge badge--success"><span class="badge__dot"></span>Pago</span></td><td>20/05/2024</td><td><div class="row-actions"><button class="row-action-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/loadComponents.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>
